@@ -1,0 +1,35 @@
+#include <stdio.h>
+#define SIZE 100
+
+int a[SIZE], n = 0;
+
+void insert(int val) {
+    if (n < SIZE) a[n++] = val;
+}
+
+void delete() {
+    if (n > 0) n--;
+}
+
+void display() {
+    for (int i = 0; i < n; i++) printf("%d ", a[i]);
+    printf("\n");
+}
+
+int main() {
+    int ch, val;
+    do {
+        printf("1.Insert 2.Delete 3.Display 4.Exit\n");
+        scanf("%d", &ch);
+        if (ch == 1) {
+            printf("Enter value: ");
+            scanf("%d", &val);
+            insert(val);
+        } else if (ch == 2) {
+            delete();
+        } else if (ch == 3) {
+            display();
+        }
+    } while (ch != 4);
+    return 0;
+}

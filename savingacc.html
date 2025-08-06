@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Open Savings Account | TrustBank</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f8fb;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #003366;
+      margin-bottom: 20px;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .feature {
+      background: #e6f0ff;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, select {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 12px;
+      background-color: #004080;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #003366;
+    }
+
+    .success {
+      color: green;
+      text-align: center;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .features {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Open a Savings Account</h1>
+    <p>Safe. Secure. Simple.</p>
+  </header>
+
+  <div class="container">
+    <h2>Why Choose Our Savings Account?</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>High Interest</h3>
+        <p>Earn up to 6.5% annually on your savings.</p>
+      </div>
+      <div class="feature">
+        <h3>Zero Fees</h3>
+        <p>No minimum balance or maintenance charges.</p>
+      </div>
+      <div class="feature">
+        <h3>24/7 Access</h3>
+        <p>Use our mobile app and net banking anytime.</p>
+      </div>
+    </div>
+
+    <h2>Open Your Account Now</h2>
+    <form id="accountForm">
+      <input type="text" id="fullname" placeholder="Full Name" required />
+      <input type="email" id="email" placeholder="Email Address" required />
+      <input type="tel" id="phone" placeholder="Phone Number" required />
+      <select id="city" required>
+        <option value="">Select City</option>
+        <option value="mumbai">Mumbai</option>
+        <option value="delhi">Delhi</option>
+        <option value="ahmedabad">Ahmedabad</option>
+        <option value="bangalore">Bangalore</option>
+      </select>
+      <input type="number" id="amount" placeholder="Initial Deposit (INR)" required />
+      <button type="submit">Submit Application</button>
+    </form>
+
+    <p class="success" id="successMsg"></p>
+  </div>
+
+  <script>
+    const form = document.getElementById('accountForm');
+    const successMsg = document.getElementById('successMsg');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      successMsg.textContent = "🎉 Application submitted successfully!";
+      form.reset();
+    });
+  </script>
+</body>
+</html>
+s

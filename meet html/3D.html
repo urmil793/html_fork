@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Daily Routine</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(145deg, #dfe9f3, #ffffff);
+      padding: 40px;
+      color: #333;
+      perspective: 1000px;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: auto;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 20px 20px 60px #d9d9d9,
+                  -20px -20px 60px #ffffff;
+      padding: 40px;
+      transform: rotateX(2deg) rotateY(2deg);
+      transition: transform 0.4s ease;
+    }
+
+    .container:hover {
+      transform: rotateX(0deg) rotateY(0deg) scale(1.01);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.8em;
+      color: #4CAF50;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      transform-style: preserve-3d;
+    }
+
+    th, td {
+      padding: 15px 25px;
+      text-align: left;
+      transition: background-color 0.3s;
+    }
+
+    th {
+      background: linear-gradient(90deg, #43cea2, #185a9d);
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f3faff;
+    }
+
+    tr:hover {
+      background-color: #e0f7fa;
+      transform: scale(1.02);
+    }
+
+    .tip {
+      margin-top: 30px;
+      padding: 20px;
+      background: #e0f0ff;
+      border-left: 8px solid #2196F3;
+      border-radius: 12px;
+      font-style: italic;
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+      transform: translateZ(20px);
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: #777;
+      font-size: 0.9em;
+      text-shadow: 1px 1px 2px #ccc;
+    }
+
+    @media(max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      th, td {
+        padding: 10px 15px;
+      }
+
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🕒 My 3D Daily Routine</h1>
+    <table>
+      <tr>
+        <th>Time</th>
+        <th>Activity</th>
+      </tr>
+      <tr><td>6:30 AM</td><td>Wake up, freshen up</td></tr>
+      <tr><td>7:00 – 8:00 AM</td><td>Light exercise + breakfast</td></tr>
+      <tr><td>8:00 – 10:00 AM</td><td><strong>Study Session 1 📚</strong></td></tr>
+      <tr><td>10:00 – 10:30 AM</td><td>Short break/snack</td></tr>
+      <tr><td>10:30 – 12:30 PM</td><td><strong>Study Session 2 📘</strong></td></tr>
+      <tr><td>12:30 – 1:30 PM</td><td>Lunch + rest</td></tr>
+      <tr><td>1:30 – 3:30 PM</td><td>Free time / gaming / nap</td></tr>
+      <tr><td>3:30 – 5:00 PM</td><td>Relax / walk / hobbies</td></tr>
+      <tr><td>5:00 – 7:00 PM</td><td><strong>Gaming Time 🎮</strong></td></tr>
+      <tr><td>7:00 – 8:00 PM</td><td>Dinner + chill</td></tr>
+      <tr><td>8:00 – 9:00 PM</td><td>Review day or watch videos</td></tr>
+      <tr><td>9:00 – 10:30 PM</td><td>Wind down & prepare for sleep</td></tr>
+      <tr><td>10:30 PM</td><td><strong>Sleep 💤</strong></td></tr>
+    </table>
+
+    <div class="tip">
+      💡 <strong>Tips:</strong> Study when your brain is sharp. Use gaming as a reward. Sleep well to stay focused!
+    </div>
+
+    <footer>
+      Created by Meet Prajapati | Stay Consistent, Stay Focused 💪
+    </footer>
+  </div>
+</body>
+</html>

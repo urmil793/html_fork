@@ -1,0 +1,127 @@
+<html>
+<head>
+<title> home </title>
+<style>
+    body{
+    background-color: rgb(79, 174, 222);
+    background-image: linear-gradient(rgb(111, 238, 255), rgb(189, 165, 255));
+     
+}
+table{
+    background: transparent;
+     box-shadow: 15px 15px 15px rgb(255, 255, 255);
+     background:linear-gradient( rgb(157, 188, 255), rgb(134, 255, 209));
+} 
+.slideshow-container {
+      position: relative;
+      max-width: 600px;
+      height: 400px;
+      margin: auto;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .slide.active {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+<UL ALIGN="CENTER"><Br>
+<LI>
+ ⚓ Black Pearl Bank, United state was established in the year 1896 as a Private Bank . ⚓ Black Pearl Bank  United state is approved by , and is affiliated with US gavarment. ⚓ Black Pearl Bank in the field of Management. jorj harbat is the Director.</LI>
+</UL><BR><BR><BR>
+<H2 ALIGN="CENTER"><i>⚓ Black Peral Bank</i></H2>
+<TABLE BORDER="2" ALIGN="CENTER" WIDTH="1000"BGCOLOR="white">
+<TR>
+<TD> Bank Name </TD> 
+<TD> Black Pearl Bank, United state </TD>
+</TR>
+<TR>
+<TD> Estd. Year </TD> 
+<TD> 1896 </TD>
+</TR>
+<TR>
+<TD> Affiliated to </TD> 
+<TD> USIF, United state </TD>
+</TR>
+<TR>
+<TD> Approved/Recognised by </TD> 
+<TD> AICTE </TD>
+</TR>
+<TR>
+<TD> Type </TD> 
+<TD> Private </TD>
+</TR>
+<TR>
+<TD> Programmes offered </TD> 
+<TD> UP/ MP </TD>
+</TR>
+<TR>
+<TD> Address </TD> 
+<TD> Opp.lo sentos - 01,
+United state </TD>
+</TR>
+<TR>
+<TD> Contact Number </TD> 
+<TD> +01-9081-8555-25 </TD>
+</TR>
+<TR>
+<TD> Official Website </TD> 
+<TD>  </TD>
+</TR>
+</TABLE><BR>
+</BODY>
+
+
+
+
+<H2 ALIGN="CENTER">⚓ Black Pearl Bank </H2>
+<H4 ALIGN="CENTER">
+<div class="slideshow-container">
+    <div class="slide active">
+      <img src="C:\Users\meet\Desktop\project\photo.1.jpg"" alt="Photo 1">
+    </div>
+    <div class="slide">
+      <img src="C:\Users\meet\Desktop\project\photo.2.jpg""alt="Photo 2">
+    </div>
+    <div class="slide">
+      <img src="C:\Users\meet\Desktop\project\photo.6.jpg""alt="Photo 3">
+    </div>
+    <div class="slide">
+      <img src="C:\Users\meet\Desktop\project\photo.8.jpg"" alt="Photo 5">
+    </div>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let current = 0;
+
+    function showNextSlide() {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }
+
+    setInterval(showNextSlide, 3000); // Change every 3 seconds
+  </script>
+  
+</H4>
+
+</body>
+</html>

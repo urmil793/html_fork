@@ -1,0 +1,142 @@
+
+meet@LAPTOP-GCM2TKJ0 MINGW64 ~ (master)
+$ mkdir sample-project
+cd sample-project
+git init
+mkdir: cannot create directory ‘sample-project’: File exists
+Reinitialized existing Git repository in C:/Users/meet/sample-project/.git/
+
+meet@LAPTOP-GCM2TKJ0 MINGW64 ~/sample-project (master)
+$ mkdir sample1-project
+cd sample1-project
+git init
+Initialized empty Git repository in C:/Users/meet/sample-project/sample1-project/.git/
+
+meet@LAPTOP-GCM2TKJ0 MINGW64 ~/sample-project/sample1-project (master)
+$ echo "Git is a version control system." > readme.txt
+git add readme.txt
+git commit -m "Add initial readme.txt"
+warning: in the working copy of 'readme.txt', LF will be replaced by CRLF the next time Git touches it
+[master (root-commit) b342c30] Add initial readme.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 readme.txt
+
+meet@LAPTOP-GCM2TKJ0 MINGW64 ~/sample-project/sample1-project (master)
+$ echo "Git is a version control system." > readme1.txt
+git add readme1.txt
+git commit -m "Add initial readme1.txt"
+warning: in the working copy of 'readme1.txt', LF will be replaced by CRLF the next time Git touches it
+[master 3fe5d33] Add initial readme1.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 readme1.txt
+
+meet@LAPTOP-GCM2TKJ0 MINGW64 ~/sample-project/sample1-project (master)
+$ echo "Git is a version control system." > HTML.txt
+
+meet@LAPTOP-GCM2TKJ0 MINGW64 ~/sample-project/sample1-project (master)
+$ git add HTML.txt
+warning: in the working copy of 'HTML.txt', LF will be replaced by CRLF the next time Git touches it
+
+meet@LAPTOP-GCM2TKJ0 MINGW64 ~/sample-project/sample1-project (master)
+$ git commit -m "Add initial HTML.txt"
+[master 17bea49] Add initial HTML.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 HTML.txt
+
+meet@LAPTOP-GCM2TKJ0 MINGW64 ~/sample-project/sample1-project (master)
+$ echo "Git tracks changes in source code." >> HTML.txt
+git add readme.txt
+git commit -m "Update readme.txt with additional info"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   HTML.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+meet@LAPTOP-GCM2TKJ0 MINGW64 ~/sample-project/sample1-project (master)
+$ echo "Git tracks changes in source code." >> HTML.txt
+git add HTML.txt
+git commit -m "Update HTML.txt with additional info"
+warning: in the working copy of 'HTML.txt', LF will be replaced by CRLF the next time Git touches it
+[master 43fc792] Update HTML.txt with additional info
+ 1 file changed, 2 insertions(+)
+
+meet@LAPTOP-GCM2TKJ0 MINGW64 ~/sample-project/sample1-project (master)
+$ git log
+commit 43fc79222b4fbbaaf753acb817f0c3ecec3d1357 (HEAD -> master)
+Author: Meet <officialpm29@gmail.com>
+Date:   Thu Jul 24 09:50:31 2025 +0530
+
+    Update HTML.txt with additional info
+
+commit 17bea491f037789cf7711198e0704ea9ff8ab3cf
+Author: Meet <officialpm29@gmail.com>
+Date:   Thu Jul 24 09:49:11 2025 +0530
+
+    Add initial HTML.txt
+
+commit 3fe5d339340bfc9a7fdfd037f3a0f701871291af
+Author: Meet <officialpm29@gmail.com>
+Date:   Thu Jul 24 09:47:13 2025 +0530
+
+    Add initial readme1.txt
+
+commit b342c3078e5a1aff8bbb4a3768af48358ab900bf
+Author: Meet <officialpm29@gmail.com>
+Date:   Thu Jul 24 09:46:33 2025 +0530
+
+    Add initial readme.txt
+
+meet@LAPTOP-GCM2TKJ0 MINGW64 ~/sample-project/sample1-project (master)
+$ git show
+commit 43fc79222b4fbbaaf753acb817f0c3ecec3d1357 (HEAD -> master)
+Author: Meet <officialpm29@gmail.com>
+Date:   Thu Jul 24 09:50:31 2025 +0530
+
+    Update HTML.txt with additional info
+
+diff --git a/HTML.txt b/HTML.txt
+index 7f63a40..47d8161 100644
+--- a/HTML.txt
++++ b/HTML.txt
+@@ -1 +1,3 @@
+ Git is a version control system.
++Git tracks changes in source code.
++Git tracks changes in source code.
+
+meet@LAPTOP-GCM2TKJ0 MINGW64 ~/sample-project/sample1-project (master)
+$ git show <COMMIT-ID>
+bash: syntax error near unexpected token `newline'
+
+meet@LAPTOP-GCM2TKJ0 MINGW64 ~/sample-project/sample1-project (master)
+$ git show <commit-id>
+bash: syntax error near unexpected token `newline'
+
+meet@LAPTOP-GCM2TKJ0 MINGW64 ~/sample-project/sample1-project (master)
+$ git show <b342c3078e5a1aff8bbb4a3768af48358ab900bf>
+bash: syntax error near unexpected token `newline'
+
+meet@LAPTOP-GCM2TKJ0 MINGW64 ~/sample-project/sample1-project (master)
+$ git show <commit-b342c3078e5a1aff8bbb4a3768af48358ab900bf>
+bash: syntax error near unexpected token `newline'
+
+meet@LAPTOP-GCM2TKJ0 MINGW64 ~/sample-project/sample1-project (master)
+$ git show b342c3078e5a1aff8bbb4a3768af48358ab900bf
+commit b342c3078e5a1aff8bbb4a3768af48358ab900bf
+Author: Meet <officialpm29@gmail.com>
+Date:   Thu Jul 24 09:46:33 2025 +0530
+
+    Add initial readme.txt
+
+diff --git a/readme.txt b/readme.txt
+new file mode 100644
+index 0000000..7f63a40
+--- /dev/null
++++ b/readme.txt
+@@ -0,0 +1 @@
++Git is a version control system.
+
+meet@LAPTOP-GCM2TKJ0 MINGW64 ~/sample-project/sample1-project (master)
+$
